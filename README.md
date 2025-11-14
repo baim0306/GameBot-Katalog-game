@@ -106,7 +106,7 @@ Untuk menjalankan proyek ini di komputer lokal Anda, ikuti langkah-langkah berik
 
 ## 🔗 Link
 
-* **Live Demo (Tautan Hosting):** (Sertakan tautan Vercel/Netlify/GitHub Pages Anda di sini)
+* **Live Demo:** ([https://game-bot-katalog-game-ku9uovnps-baimdcs-projects.vercel.app/](https://game-bot-katalog-game-ku9uovnps-baimdcs-projects.vercel.app/))
 * **API Data:** (`https://rawg.io/apidocs`)
 
 ---
