@@ -66,7 +66,7 @@ Untuk menjalankan proyek ini di komputer lokal Anda, ikuti langkah-langkah berik
 1.  **Clone Repositori:**
     ```bash
     git clone [https://github.com/baim0306/GameBot-Katalog-game.git](https://github.com/baim0306/GameBot-Katalog-game.git)
-    cd REPOSITORY-NAME
+    cd https://github.com/baim0306/GameBot-Katalog-game.git
     ```
 
 2.  **Instal Dependencies Server:**
@@ -97,10 +97,10 @@ Untuk menjalankan proyek ini di komputer lokal Anda, ikuti langkah-langkah berik
 ## 🖼️ Screenshot
 
 ### Halaman Beranda (Home Page)
-![Screenshot Halaman Utama](public/assets/images/home-page.jpeg)
+![Screenshot Halaman Utama](public/assets/images/home-page.jpg)
 
 ### Halaman Detail Game (Detail Page)
-![Screenshot Halaman Detail Game](public/assets/images/game-page.jpeg)
+![Screenshot Halaman Detail Game](public/assets/images/game-page.jpg)
 
 ---
 

@@ -9,16 +9,12 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 const ApiKey = process.env.RAWG_API_KEY;
-const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
     res.render('index', { currentQuery: req.query });
 });
 
 // fetch rawg
-app.listen(PORT, () => console.log(`server is runnning on http://localhost:${PORT}`));
-
-
 app.get('/api/games', async(req, res) => {
     const { page = 1, search = '', ordering = '', genre = ''} = req.query;
 
@@ -62,3 +58,5 @@ app.get('/game/:id', async (req, res) => {
         res.status(500).send('Failed to fetch game details');
     }
 });
+
+export default app;
