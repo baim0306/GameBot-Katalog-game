@@ -1,13 +1,14 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const path = require('path');
 dotenv.config();
 
 const app = express();
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs');
-app.set('views', 'views');
+app.set('views', path.join(__dirname, 'views'));;
 
 const ApiKey = process.env.RAWG_API_KEY;
 
