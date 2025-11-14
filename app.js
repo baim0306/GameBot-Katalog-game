@@ -1,5 +1,5 @@
-import express from 'express';
-import dotenv from 'dotenv';
+const express = require('express');
+const dotenv = require('dotenv');
 dotenv.config();
 
 const app = express();
@@ -7,6 +7,7 @@ const app = express();
 app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
+app.set('views', 'views');
 
 const ApiKey = process.env.RAWG_API_KEY;
 
@@ -59,4 +60,4 @@ app.get('/game/:id', async (req, res) => {
     }
 });
 
-export default app;
+module.exports = app;
