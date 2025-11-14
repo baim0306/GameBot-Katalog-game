@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title><%= game.name %></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/style.css">
+
+     <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body class="md:flex md:flex-wrap">
+
+    <script>
+        const currentQueryParams = <%- JSON.stringify(currentQuery) %>;
+    </script>
+
+    <% const genres = game.genres.map(g => g.name).join(', '); %>
+    <% const platforms = game.platforms.map( m => m.platform.name).join(', '); %>
+
+    <%- include ('partials/sidebar') %>
+
+    <section class="hero-section w-full md:w-[80%] min-h-screen md:w-[80%] bg-slate-950">
+
+        <div class="relative w-full py-20 px-4 bg-center bg-cover after:content-[''] after:absolute after:w-full after:h-full after:top-0 after:left-0 after:bg-gradient-to-b after:from-transparent after:to-slate-950" 
+        style="background-image: url('<%= game.background_image %>');">
+        <h1 class="text-4xl md:text-6xl text-white font-bold font-stack z-[9] absolute bottom-4 left-4 right-4 font-stack"><%= game.name %></h1>
+        <p class="text-xl text-white absolute top-4 right-4 bg-gray-800/70 px-3 py-1 rounded-lg">
+        ⭐ <%= game.rating %> / <%= game.ratings_count %> reviews
+        </p>
+        </div>
+
+        <div class="p-6 md:p-10 text-white">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 border-b border-gray-700 pb-6"><div>
+                <p class="text-sm text-gray-400 uppercase tracking-wider">Released</p>
+                <p class="text-lg font-semibold"><%= game.released %></p>
+            </div>
+            <div>
+                <p class="text-sm text-gray-400 uppercase tracking-wider">Metacritic</p>
+                <% if (game.metacritic) { %>
+                <span class="text-lg font-semibold px-2 py-1 rounded-md" 
+                style="background-color: <%= game.metacritic > 75 ? 'green' : (game.metacritic > 50 ? 'orange' : 'red') %>;">
+                    <%= game.metacritic %>
+                </span>
+                <% } else { %>
+                <p class="text-lg font-semibold text-gray-500">N/A</p>
+                <% } %>
+                </div>
+                <div class="col-span-2">
+                <p class="text-sm text-gray-400 uppercase tracking-wider">Platforms</p>
+                <p class="text-lg font-semibold"><%= platforms %></p>
+                 </div>
+            </div>
+
+            <div class="mb-8">
+            <h3 class="text-xl font-bold mb-2 text-gray-300">Genres</h3>
+            <p class="text-lg mb-4"><%= genres %></p>
+
+            <% if (game.developers && game.developers.length > 0) { %>
+                <h3 class="text-xl font-bold mb-2 text-gray-300">Developer</h3>
+                <p class="text-lg"><%= game.developers.map(d => d.name).join(', ') %></p>
+            <% } %>
+            </div>
+
+            <div class="mb-10">
+            <h3 class="text-3xl font-bold mb-4 border-b border-red-500 pb-2 text-red-400 font-stack">About</h3>
+            <div class="game-description leading-relaxed text-gray-300 max-w-4xl"><%- game.description %></div>
+            </div>
+    </div>
+
+        <button class="nav-btn fixed bottom-10 right-10 bg-slate-800 rounded-full w-14 h-14 shadow-lg shadow-black/50 border-2 border-white block md:hidden z-[999]">
+            <div class="flex flex-col gap-2 justify-center items-center">
+            <span class="w-1/2 border-2 border-white"></span>
+            <span class="w-1/2 border-2 border-white"></span>
+            <span class="w-1/2 border-2 border-white"></span>
+        </div>
+    </button>
+    </section>
+
+    <script src="/script.js"></script>
+</body>
+</html>

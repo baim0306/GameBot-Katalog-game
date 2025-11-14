@@ -1,0 +1,36 @@
+<section class="sidebar w-full bg-slate-800 p-4 md:w-[20%] -translate-x-[100%] md:-translate-x-0 transition duration-500 ease-in-out fixed h-screen md:static md:h-auto z-[99]">
+    <!-- home btn -->
+     <button class="gameBot text-3xl text-white font-bold font-stack">GameBot</button>
+
+    <!-- search section -->
+    <div class="search flex md:flex-col lg:flex-row gap-4 mt-5">
+        <h2 class="text-lg text-slate-300 font-bold ">Search</h2>
+        <input type="text" placeholder="masukkan nama game..." class="text-sm xl:text-base search-input border-2 border-slate-300 rounded-lg bg-transparent w-full px-1 text-slate-300">
+    </div>
+
+    <!-- latest, top rated, genres -->
+     <h3 class="text-lg font-bold text-slate-300 mt-10 md:text-red-700">Sort By</h3>
+     <ul class="list-sort p-4 text-sm xl:text-base">
+        <span class="releasedBtn text-slate-300 hover:text-slate-500 cursor-pointer">Released date 🔻</span>
+        <ul class="releasedUl overflow-hidden max-h-0 transition-all duration-300 mt-2 px-4">
+            <li class="text-slate-300 hover:text-slate-500 cursor-pointer mb-2">Latest</li>
+            <li class="text-slate-300 hover:text-slate-500 cursor-pointer mb-2">Oldest</li>
+        </ul>
+        <li class="topRated text-slate-300 hover:text-slate-500 cursor-pointer mb-2">Top Rated</li>
+        <span class="genresBtn text-slate-300 hover:text-slate-500 cursor-pointer">Genres 🔻</span>
+        <ul class="genresUl overflow-hidden max-h-0 transition-all duration-300 mt-2 px-4">
+            <li data-genre="Action" class="genresGame text-slate-300 hover:text-slate-500 cursor-pointer mb-2">Action</li>
+            <li data-genre="Strategy" class="genresGame text-slate-300 hover:text-slate-500 cursor-pointer mb-2">Strategy</li>
+            <li data-genre="RPG" class="genresGame text-slate-300 hover:text-slate-500 cursor-pointer mb-2">RPG</li>
+            <li data-genre="Shooter" class="genresGame text-slate-300 hover:text-slate-500 cursor-pointer mb-2">Shooter</li>
+            <li data-genre="Adventure" class="genresGame text-slate-300 hover:text-slate-500 cursor-pointer mb-2">Adventure</li>
+            <li data-genre="Puzzle" class="genresGame text-slate-300 hover:text-slate-500 cursor-pointer mb-2">Puzzle</li>
+            <li data-genre="Racing" class="genresGame text-slate-300 hover:text-slate-500 cursor-pointer mb-2">Racing</li>
+            <li data-genre="Sports" class="genresGame text-slate-300 hover:text-slate-500 cursor-pointer mb-2">Sports</li>
+            <li data-genre="Indie" class="genresGame text-slate-300 hover:text-slate-500 cursor-pointer mb-2">Indie</li>
+            <li data-genre="Family" class="genresGame text-slate-300 hover:text-slate-500 cursor-pointer mb-2">Family</li>
+            <li data-genre="Simulation" class="genresGame text-slate-300 hover:text-slate-500 cursor-pointer mb-2">Simulation</li>
+            <li data-genre="Casual" class="genresGame text-slate-300 hover:text-slate-500 cursor-pointer mb-2">Casual</li>
+        </ul>
+     </ul>
+</section>

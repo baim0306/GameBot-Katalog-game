@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameBot</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- style css -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="md:flex md:flex-wrap">
+    <script>
+        const currentQueryParams = <%- JSON.stringify(currentQuery) %>;
+    </script>
+    <!-- sidebar section start -->
+     <%- include('partials/sidebar') %>
+    <!-- sidebar section end -->
+    
+    <!-- hero section start -->
+     <section class="hero-section w-full min-h-screen md:w-[80%] bg-slate-950 p-4 relative">
+        <div class="relative w-full py-20 px-4 bg-[url('assets/images/home-bg.webp')] bg-center bg-cover after:content-[''] after:absolute after:w-full after:h-full after:top-0 after:left-0 after:bg-gradient-to-b after:from-transparent after:to-slate-950">
+            <h2 class="title text-5xl text-white font-bold font-stack z-[9] absolute top-4 left-4">HOME</h2>
+        </div>
+        <div class="cards grid grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 mt-5">
+        </div>
+        <!-- nav-btn -->
+        <button class="nav-btn fixed bottom-10 right-10 bg-slate-800 rounded-full w-14 h-14 shadow-lg shadow-black/50 border-2 border-white block md:hidden z-[999]">
+            <div class="flex flex-col gap-2 justify-center items-center">
+                <span class="w-1/2 border-2 border-white"></span>
+                <span class="w-1/2 border-2 border-white"></span>
+                <span class="w-1/2 border-2 border-white"></span>
+            </div>
+        </button>
+     </section>
+    <!-- hero section end -->
+
+    <!-- script js -->
+     <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+body, html{
+    padding: 0;
+    margin: 0;
+    font-family : arial, sans;
+}
+
+.font-stack {
+  font-family: "Stack Sans Notch", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.card::after{
+  content : 'Detail';
+  backdrop-filter : blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position : absolute;
+  top : 0;
+  left : 0;
+  width : 100%;
+  height : 100%;
+  background-color: rgba(34, 34, 34, 0.5);
+  opacity : 0;
+  z-index : 2;
+}
