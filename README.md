@@ -106,7 +106,7 @@ Untuk menjalankan proyek ini di komputer lokal Anda, ikuti langkah-langkah berik
 
 ## 🔗 Link
 
-* **Live Demo:** ([https://game-bot-katalog-game-ku9uovnps-baimdcs-projects.vercel.app/](https://game-bot-katalog-game-ku9uovnps-baimdcs-projects.vercel.app/))
+* **Live Demo:** ([https://game-bot-katalog-game.vercel.app/](https://game-bot-katalog-game.vercel.app/))
 * **API Data:** (`https://rawg.io/apidocs`)
 
 ---

@@ -58,7 +58,17 @@
 
             <div class="mb-8">
             <h3 class="text-xl font-bold mb-2 text-gray-300">Genres</h3>
-            <p class="text-lg mb-4"><%= genres %></p>
+            <div class="flex flex-wrap gap-2 mb-4">
+            <% game.genres.forEach(genre => { %>
+            <a 
+                href="/?genre=<%= genre.slug %>" 
+                class="bg-gray-700 hover:bg-red-600 text-white text-sm px-3 py-1 rounded-full transition duration-200"
+                aria-label="Filter games by <%= genre.name %>"
+            >
+                <%= genre.name %>
+            </a>
+            <% }); %>
+            </div>
 
             <% if (game.developers && game.developers.length > 0) { %>
                 <h3 class="text-xl font-bold mb-2 text-gray-300">Developer</h3>
