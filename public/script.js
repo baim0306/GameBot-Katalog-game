@@ -148,26 +148,26 @@ function gameCard(game, genres) {
 }
 
 function loading() {
-  const loading = `<div class="loader"></div>
-                    <style>
-                    .loader {
-                      border: 6px solid #f3f3f3; /* warna background */
-                      border-top: 6px solid #3498db; /* warna spinner */
-                      border-radius: 50%;
-                      width: 100px;
-                      height: 100px;
-                      animation: spin 1s linear infinite;
-                      position: absolute;
-                      top: 50%;
-                      left: 50%;
-                      transform: translate(-50%, -50%);
-                    }
+  const loadingHtml = `
+                      <div id="loading-overlay" class="fixed inset-0 z-[9999] bg-slate-900/80 flex items-center justify-center">
+                        <div class="loader"></div>
+                      </div>
+                      <style>
+                        .loader {
+                          border: 6px solid rgba(255, 255, 255, 0.2);
+                          border-top: 6px solid #f97316;
+                          border-radius: 50%;
+                          width: 100px;
+                          height: 100px;
+                          animation: spin 1s linear infinite;
+                        }
 
-                    @keyframes spin {
-                      0% { transform: rotate(0deg); }
-                      100% { transform: rotate(360deg); }
-                    }
-                    </style>
-                    `;
-return loading;
+                        @keyframes spin {
+                          0% { transform: rotate(0deg); }
+                          100% { transform: rotate(360deg); }
+                        }
+                      </style>
+  `;
+  
+  return loadingHtml;
 }
