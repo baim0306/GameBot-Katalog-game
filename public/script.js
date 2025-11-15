@@ -157,7 +157,6 @@ function loading() {
                       width: 100px;
                       height: 100px;
                       animation: spin 1s linear infinite;
-                      margin: 50px auto;
                       position: absolute;
                       top: 50%;
                       left: 50%;
